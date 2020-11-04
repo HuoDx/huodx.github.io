@@ -1,0 +1,15 @@
+<div style="clear: both; display: flex; flex-wrap: wrap; margin-bottom: 48px;">
+  <div style="float: left; margin-right: 1em; width: 320px;">
+    <img src="{{ include.image_path }}" alt="">
+  </div>
+  <div>
+    <h3>
+      <a class="post-link" href="{{ include.url | relative_url }}">
+        {{ include.title | escape }}
+      </a>
+    </h3>
+
+    <div style="width: 300px;">{{ include.description | markdownify }}</div>
+    <a href="{{ include.url | relative_url }}">see full post</a>
+  </div>
+</div>

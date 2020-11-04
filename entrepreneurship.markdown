@@ -1,19 +1,16 @@
 ---
-layout: page
+layout: group
 title: Entrepreneurship
 permalink: /Entrepreneurship/
+target_tags:
+ - entrepreneurship
 order: 0
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+{% include module.html image_path="/assets/img/onelove/RKS.jpg" url="/2020/08/14/onelove.html" title="One Love" description="
+Raised in August, by students.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+We donated HKD $10000 to support fighting against COVID-19!
+" %}
 
 
-[jekyll-organization]: https://github.com/jekyll

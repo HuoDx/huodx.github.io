@@ -1,8 +1,14 @@
 ---
-layout: page
+layout: group
 title: Miscellaneous
 permalink: /miscellaneous/
 order: 0
+target_tags: 
+ - art
+ - boxing
+ - COVID
+ - miscellaneous
+ 
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
@@ -17,3 +23,12 @@ You can find the source code for Jekyll at GitHub:
 
 
 [jekyll-organization]: https://github.com/jekyll
+
+<h1>{{ page.title }}</h1>
+<div class="tags">
+    {% for category in page.categories %}
+        <span class="tag">
+            <a href="/category/{{ category }}">#{{ category }}</a>
+        </span>
+    {% endfor %}
+</div>

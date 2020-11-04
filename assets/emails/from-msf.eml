@@ -1,0 +1,199 @@
+Delivered-To: queuehuo@gmail.com
+Received: by 2002:a4f:c744:0:0:0:0:0 with SMTP id b4csp344518ivl;
+        Fri, 23 Oct 2020 04:33:54 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxJnlTtVbUt+KmYh/sNuR4CXVeq6Y/SwurBjWNV5rBKa7ABobDhHmjJ0OR84+4v58pym1dL
+X-Received: by 2002:a1c:b18a:: with SMTP id a132mr1949364wmf.59.1603452834761;
+        Fri, 23 Oct 2020 04:33:54 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1603452834; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=zlj9wzOjuBIuoBTfqikOhCYfEihkb/NeS4dBKEoJY8kccO0o52ndP9dV/E1BAK8fuh
+         2MowKCJfio1MLZKd0V/JzzldpmFE2mhLKDxLpfNzd65+2O62GM1Usl1GcWyE0x9Nfc5a
+         KmrfvcWRpGD3r8iEOj4JdkDeLKMIGDB35I5UkAl99NwLIFiMmYTGUgPw71owohPA59Fv
+         DtDT9d3kn1y+d/aV2sRviG3W8hjkuga/8EMK0VYjFmjo9hBivuY9NbBP+w3EdKQLQPEm
+         xLP8V7pd8bvyc3hLl1QPFF44lfB0T0zC+GYAskV4P04dsIKHcFFVJLh4TID2VRMPZsBB
+         BRfw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:date:message-id:subject
+         :reply-to:from:to:dkim-signature;
+        bh=82m1/pKvsvTJirgtwvRK6mTxJAhMpsaV3gDJtzwBN0g=;
+        b=ZYLS7BxcTdBFaRndKkqw3DJV//zcDxOhSAm6l5kO0BC3Crt5lCDJ0mThCwoF3+Br+C
+         YM/fTxG/QfqE3BpRBck2Pi9qMkq95dzCh64TkchyEYf3RRswXmcGHos+Xt4gJBFE2Czb
+         O1IJXespFWQ0kzObvkOrtkmgw+Y9yjxViqvh0mtGQP0R2mTbXhM26W+G6eoLoV1Y/0HZ
+         262qewY7cU8bFsMl07gMBaBVtuVLYAhB2w5kmr8eTvZ5AifdD/ky6BkQt3fMp/qNtEF8
+         nhpDsBbJb1WUO6pW59I1KfyXyBHiTxyxUW/lvyWGMu2OfOPbXAb0svNkG5IkEdtXPR5v
+         gntg==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hongkong.msf.org header.s=selector2 header.b=AQhT9sdj;
+       arc=pass (i=1 spf=pass spfdomain=hongkong.msf.org dmarc=pass fromdomain=hongkong.msf.org);
+       spf=pass (google.com: domain of no-reply@hongkong.msf.org designates 40.107.6.71 as permitted sender) smtp.mailfrom=no-reply@hongkong.msf.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=msf.org
+Return-Path: <no-reply@hongkong.msf.org>
+Received: from EUR04-DB3-obe.outbound.protection.outlook.com (mail-eopbgr60071.outbound.protection.outlook.com. [40.107.6.71])
+        by mx.google.com with ESMTPS id m4si962466wmi.114.2020.10.23.04.33.53
+        for <queuehuo@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 23 Oct 2020 04:33:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of no-reply@hongkong.msf.org designates 40.107.6.71 as permitted sender) client-ip=40.107.6.71;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hongkong.msf.org header.s=selector2 header.b=AQhT9sdj;
+       arc=pass (i=1 spf=pass spfdomain=hongkong.msf.org dmarc=pass fromdomain=hongkong.msf.org);
+       spf=pass (google.com: domain of no-reply@hongkong.msf.org designates 40.107.6.71 as permitted sender) smtp.mailfrom=no-reply@hongkong.msf.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=msf.org
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=FxisLoDjE2b0jX8Yz21H7ilHHyvIeYYphLy/49VvcpoI7uAe1p66bwE2tQuIdi1WbqaH3t6H//0mRUB+KY7r9V7j2zV4558XcSUETZpQCTUon7xwlcfpKzPI+KiSODg6A/Fj7uRYZClepq2ZHl+qgNmjaMo/Ka3Ck2SNUNNvr8zWVHFniLimel5lOlaJYjhn2VUFNAEWFqcZDUGlJwHUirI4Ra5NsWQff6L3YFRckmIKNXenCoKNGUY9J7aJ+J+QncLFJjXE9J6YLPsg7dZ8/dwLroEm+w0STRxHRjU4I27e4CgGllN/mjrYGWY8FRDb1ohJbIsy8e/4LeOFtW+heQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=82m1/pKvsvTJirgtwvRK6mTxJAhMpsaV3gDJtzwBN0g=;
+ b=gCw+FyciJzfZ3UdV4dDGoFSAczuC90T9ii9YJkUSogMoHafDsymusDSd2n63cYJSXe0HvhI4Mu+fN93Xx0W3fMEBHC7qM9E8CPlkc19iuk3Kat6OLrfd+2PR76khTwMrvCBB5Ckg4Yf2n6EL/rah4GjbmgsCMZvMWs9MsZ++bDXleFoRw253g1vMQkDxwKbKQvFBqvhozzbemuNf0ZoRYC78fyVc3A4ADHSfhzQ9ouTwN85q8FbepeYO3K7kk7Z4x2vLcg2FmH00oZ6SXRS1pKnJTdiHjGkDVoPZxAsC+uiUUqdJfaAv7/DEVNIrGDtVoKNHQI+1kVJFksgj8PjZQg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass (sender ip is
+ 103.63.134.166) smtp.rcpttodomain=gmail.com smtp.mailfrom=hongkong.msf.org;
+ dmarc=pass (p=none sp=none pct=100) action=none header.from=hongkong.msf.org;
+ dkim=none (message not signed); arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hongkong.msf.org;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=82m1/pKvsvTJirgtwvRK6mTxJAhMpsaV3gDJtzwBN0g=;
+ b=AQhT9sdjTrKT3dtAbTNGulHYLWFjZbh744GGJtGSKncUwOiKH4bfTqKaL23lIpU487CfCGsCtQjASME8LLdmHPeE0Kmm9oh1l5w+NxMzlRDFwioe/m4mXTYHmhCYSIOi4l7/n/WNS2owYdwm0eg3URgIUKqcQSmw+8aGf1GhvcY=
+Received: from AM6P192CA0083.EURP192.PROD.OUTLOOK.COM (2603:10a6:209:8d::24)
+ by AM7PR07MB6866.eurprd07.prod.outlook.com (2603:10a6:20b:1c3::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3499.14; Fri, 23 Oct
+ 2020 11:33:53 +0000
+Received: from AM5EUR02FT013.eop-EUR02.prod.protection.outlook.com
+ (2603:10a6:209:8d:cafe::9c) by AM6P192CA0083.outlook.office365.com
+ (2603:10a6:209:8d::24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3499.18 via Frontend
+ Transport; Fri, 23 Oct 2020 11:33:53 +0000
+X-MS-Exchange-Authentication-Results: spf=pass (sender IP is 103.63.134.166)
+ smtp.mailfrom=hongkong.msf.org; gmail.com; dkim=none (message not signed)
+ header.d=none;gmail.com; dmarc=pass action=none header.from=hongkong.msf.org;
+Received-SPF: Pass (protection.outlook.com: domain of hongkong.msf.org
+ designates 103.63.134.166 as permitted sender)
+ receiver=protection.outlook.com; client-ip=103.63.134.166;
+ helo=smtp.hongkong.msf.org;
+Received: from smtp.hongkong.msf.org (103.63.134.166) by
+ AM5EUR02FT013.mail.protection.outlook.com (10.152.8.105) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.3499.18 via Frontend Transport; Fri, 23 Oct 2020 11:33:51 +0000
+Received: from SMTP.hongkong.msf.org (10.169.2.241) by SMTP.hongkong.msf.org
+ (10.169.2.241) with Microsoft SMTP Server (TLS) id 15.1.225.42; Fri, 23 Oct
+ 2020 19:33:43 +0800
+Received: from ssl.msf.hk (10.169.2.1) by SMTP.hongkong.msf.org (10.169.2.241)
+ with Microsoft SMTP Server id 15.1.225.42 via Frontend Transport; Fri, 23 Oct
+ 2020 19:33:43 +0800
+To: <queuehuo@gmail.com>
+From: =?UTF-8?B?TcOpZGVjaW5zIFNhbnMgRnJvbnRpw6hyZXM=?=
+	<no-reply@hongkong.msf.org>
+Reply-To: <donation@msf.org.hk>
+Subject: =?UTF-8?B?5oSf6LCi5L2g5pSv5oyB5peg5Zu955WM5Yy755Sf?=
+Message-ID: <5f92bf98d6a440048b4dfe240aa902f3@ssl.msf.hk>
+Date: Fri, 23 Oct 2020 19:33:44 +0800
+X-Mailer: CakePHP Email Component
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+Return-Path: no-reply@hongkong.msf.org
+MIME-Version: 1.0
+X-OrganizationHeadersPreserved: SMTP.hongkong.msf.org
+X-EOPAttributedMessage: 0
+X-CrossPremisesHeadersFiltered:
+ AM5EUR02FT013.eop-EUR02.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 8b7c87ff-f974-4607-4651-08d87747842d
+X-MS-TrafficTypeDiagnostic: AM7PR07MB6866:
+X-Microsoft-Antispam-PRVS:
+	<AM7PR07MB6866601619E929FF60151436A51A0@AM7PR07MB6866.eurprd07.prod.outlook.com>
+X-MS-Oob-TLC-OOBClassifiers: OLM:1728;
+X-MS-Exchange-SenderADCheck: 1
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info:
+	rygKyGObQkga+8dc69xvoGNVsEl6GOUbt87ckgM3MkS9VxSZ2MKph6tMujXYTlZ0/2XFS/NbXuTG4KMXMPzu7UP15yBOog3rdMqXumH0LWygXpLStI8Loagh+QzMGsKzVx1AJ9hisQod0078RRRquUHs86duY8XCUm5IhsbSBJnGPrqWKeDMyzSgzPZGkeuBp9yJ6lPtudOVPES4Q4mZ3qCXicI1M7ppsxWNAFh3UKPHPCcl0Ma5pfhJn3UrPxogRosIC4c3GANo4ARKlv/N+Dcb/+xwanT6Ex7zS4ZZ7HSHa4tllRb5kDfzViO5lNZqJAJx2hqCBsDA1seAxxgO0y2bVj0eje/PmUaa6r1Kmmv5kM7U9c6DWjSljWScVswRgdM0jCa8Jqs5r1pPTt8aJkdboBxu+HIJ93wEyAvMe/0bMrRWhAE4xbaEcLzkzoyC1Gpe/gjUn/Q3O4qapm9HRbh+vNohXfXuiCKLtc0kBmpVk40OEs7y/qrPtdRgcRTe
+X-Forefront-Antispam-Report:
+	CIP:103.63.134.166;CTRY:HK;LANG:zh-cn;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:smtp.hongkong.msf.org;PTR:103-63-134-166.static.tggo.com.hk;CAT:NONE;SFS:(4636009)(376002)(346002)(396003)(39860400002)(136003)(46966005)(8936002)(36756003)(108616005)(55016002)(86362001)(24736004)(5660300002)(70586007)(70206006)(426003)(4744005)(186003)(7696005)(224303003)(316002)(786003)(26005)(478600001)(85202003)(336012)(85182001)(82310400003)(6916009)(9686003)(166002)(356005)(81166007)(47076004)(82740400003)(2906002)(4001150100001)(99626002);DIR:OUT;SFP:1101;
+X-OriginatorOrg: hongkong.msf.org
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 23 Oct 2020 11:33:51.2360
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 8b7c87ff-f974-4607-4651-08d87747842d
+X-MS-Exchange-CrossTenant-Id: 4d9dd1af-83ce-4e9b-b090-b0543ccc2b31
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=4d9dd1af-83ce-4e9b-b090-b0543ccc2b31;Ip=[103.63.134.166];Helo=[smtp.hongkong.msf.org]
+X-MS-Exchange-CrossTenant-AuthSource:
+	AM5EUR02FT013.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM7PR07MB6866
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<body>
+﻿<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+        <td style="font-family:Arial, Helvetica, sans-serif">尊敬的支持者:</td>
+	  </tr>
+  
+  <tr><td>&nbsp;</td></tr>
+  
+  <tr>
+    <td style="font-family:Arial, Helvetica, sans-serif">衷心感谢您的慷慨捐助，让无国界医生在全球的医疗人道救援工作得以进行。! 您的捐款详情如下:</td>
+  </tr>
+  
+  <tr><td>&nbsp;</td></tr>
+  
+  <tr>
+    <td>
+            <table width="100%" border="1" cellspacing="0" cellpadding="5">
+			                <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; width:150px">机构／公司:</td>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif">[Organisation/ Corporate]</td>
+              </tr>
+			                <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif">捐款日期:</td>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif">2020-10-23</td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif">捐款金额:</td>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif"><strong>HKD $</strong>10000</td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif">收据上之姓名:</td>
+				                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif">One Heart</td>
+				              </tr>
+            </table>
+	</td>
+  </tr>
+  
+  <tr><td>&nbsp;</td></tr>
+  
+  <tr>
+    <td style="font-family:Arial, Helvetica, sans-serif">我谨代表所有受惠的伤病者及无国界医生的志愿人员，再一次向你致谢！无国界医生会一直秉持我们的救援宗旨，不偏不倚地为有需要的人服务。希望您会继续支持无国界医生的工作！</td>
+  </tr>
+  
+  <tr><td>&nbsp;</td></tr>
+  
+  <tr>
+    <td style="font-family:Arial, Helvetica, sans-serif">如有任何疑问，欢迎致电(852)2338 8277 与我们联络。</td>
+  </tr>
+  
+  <tr><td>&nbsp;</td></tr>
+  
+  <tr>
+    <td style="font-family:Arial, Helvetica, sans-serif">
+    	无国界医生（香港）<br />
+	捐款事务经理<br /><br />
+	黎敏超 谨启</td>
+  </tr>
+</table>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<em>此邮件由自动系统发出，请勿回覆。如希望与我们联络，请浏览我们的网站<a href="http://www.msf.hk" target="_new">www.msf.hk</a>，亦可电邮致<a href="mailto:donation@msf.org.hk">donation@msf.org.hk</a>或致电捐款热线2338 8277。切勿透过任何电子邮件提供您的个人机密资料。为了与你保持联系，我们可能会使用你的个人资料，向你提供无国界医生的救援工作消息、活动、筹款呼吁及收集意见。你可以随时以邮寄方式或电邮至<a href="mailto:unsubscribe@msf.org.hk">unsubscribe@msf.org.hk</a> ，通知我们停止接收有关资讯。无国界医生承诺保障你的个人私隐，请参阅详列于我们网站的私隐保障承诺及私隐声明。</em>
+</body>
+</html> 
+
+
+
