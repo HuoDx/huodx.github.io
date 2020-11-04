@@ -1,7 +1,7 @@
 ---
 layout: group
 title: Entrepreneurship
-permalink: /Entrepreneurship/
+permalink: /entrepreneurship/
 target_tags:
  - entrepreneurship
 order: 0
