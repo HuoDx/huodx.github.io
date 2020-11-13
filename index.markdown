@@ -42,7 +42,7 @@ Starting with playing circuits with my dad in my childhood, I love almost everyt
 
 Compared to merely studying theories, my passion is more in using such theories to produce something meaningful for our daily lives. That's where my inner motivation as an engineer. 
 
-{% include module.html image_path="/assets/img/patent/cover.png" url="/2018/06/26/patent.html" title="My Patent: a Vocal Track Remover" description="
+{% include module.html image_path="/assets/img/patent/cover.jpg" url="/2018/06/26/patent.html" title="My Patent: a Vocal Track Remover" description="
 A tiny cheap device that can wipe the vocal track in any song.
 
 It's a less than $1 solution for an amazing effect!
@@ -64,7 +64,7 @@ I have many thoughts and emotions that I would like to express, which leads me t
 Starting from playing the saxophone 11 years ago, I've made many attempts and explorations in music. Later, I also discovered film art as another interesting way to express (after I acted in a friend's film).
 
 
-{% include module.html image_path="/assets/img/film/cover.png" url="/2019/06/04/film.html" title="Acting in a Film" description="
+{% include module.html image_path="/assets/img/film/cover.jpg" url="/2019/06/04/film.html" title="Acting in a Film" description="
 I acted in a friend's film *Where are we going* and got nominated for the best actor in the school's film festival.
 " %}
 
