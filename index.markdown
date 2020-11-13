@@ -23,7 +23,7 @@ And thanks so much to art - it inspires me in terms of technology and gives me a
 
 My dream of being an entrepreneur has emerged since 2015, and made my first attempt at the exact same year: I founded KEEER as a game studio. 
 
-![](/assets/img/KEEER/original-team.png)
+![](/assets/img/KEEER/original-team.jpg)
 
 *A photo of the initial members in 2015 when we graduate from junior high*
 
