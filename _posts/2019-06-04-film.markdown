@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Acting in a Film"
+date: 2019-06-04 19:01:37 +0800
+tags: 
+ - miscellaneous
+---
+
+<iframe width="600" height="480" src="https://xbeibeix.com/api/bilibili/biliplayer/?url=https://www.bilibili.com/video/BV1X4411T7xE"></iframe>
+
+I acted in a film *Where are we going*
+
+It‘s a story adapted from *the Moon and Sixpence*
+
+I acted as Charles Strickland and got nominated for the best actor in my school's film festival.
+
+

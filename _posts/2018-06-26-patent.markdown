@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Patent: Vocal Track Remover"
+date: 2018-06-26 21:50:00 +0800
+tags: 
+ - music
+ - tech
+---
+
+<iframe width="877" height="493" src="https://www.youtube.com/embed/M-u69gzeWlY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I invented this little device in 2018 and got my first patent for this in 2019.
+
+Click [here](/assets/patent.pdf) to see the patent document.
