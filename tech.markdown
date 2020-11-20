@@ -6,7 +6,7 @@ order: 0
 ---
 
 
-{% include module.html image_path="/assets/img/patent/cover.png" url="/2018/06/26/patent.html" title="My Patent: a Vocal Track Remover" description="
+{% include module.html image_path="/assets/img/patent/cover.jpg" url="/2018/06/26/patent.html" title="My Patent: a Vocal Track Remover" description="
 A tiny cheap device that can wipe the vocal track in any song.
 
 It's a less than $1 solution for an amazing effect!
