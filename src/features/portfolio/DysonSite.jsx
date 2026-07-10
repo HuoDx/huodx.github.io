@@ -315,10 +315,149 @@ export default function DysonSite() {
           background-size: 256px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+          .site-nav {
+            padding-inline: 28px !important;
+          }
+          .nav-links {
+            gap: 20px !important;
+          }
+          .hero {
+            padding-inline: 28px !important;
+          }
+          .hero-card {
+            padding: 40px !important;
+          }
+          .portfolio-section {
+            padding: 64px 28px !important;
+          }
+          .section-content {
+            padding: 36px !important;
+          }
+          .about-grid {
+            grid-template-columns: 1fr !important;
+            gap: 44px !important;
+          }
+          .project-row {
+            grid-template-columns: minmax(160px, 0.7fr) 1.5fr auto;
+            gap: 20px;
+          }
+          .site-footer {
+            margin-inline: 28px !important;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .site-nav {
+            justify-content: center !important;
+            padding: 16px !important;
+          }
+          .site-nav > span {
+            display: none;
+          }
+          .nav-links {
+            width: 100%;
+            justify-content: space-between;
+            gap: 10px !important;
+          }
+          .nav-item {
+            font-size: 10px;
+            letter-spacing: 0.045em;
+          }
+          .hero {
+            min-height: 100svh !important;
+            padding: 88px 16px 40px !important;
+          }
+          .hero-card {
+            padding: 32px 24px !important;
+            border-radius: 18px;
+          }
+          .hero-card h1 {
+            font-size: clamp(42px, 14vw, 58px) !important;
+          }
+          .scroll-indicator {
+            display: none !important;
+          }
+          .portfolio-section {
+            padding: 52px 16px !important;
+            scroll-margin-top: 52px;
+          }
+          .section-heading {
+            gap: 10px !important;
+            margin-bottom: 20px !important;
+            padding-left: 4px !important;
+          }
+          .section-heading h2 {
+            font-size: clamp(28px, 9vw, 36px) !important;
+          }
+          .section-heading > div {
+            margin-left: 4px !important;
+          }
+          .section-content {
+            padding: 28px 22px !important;
+            border-radius: 18px;
+          }
+          .about-grid {
+            gap: 36px !important;
+          }
+          .interest-row {
+            align-items: flex-start !important;
+            flex-direction: column;
+            gap: 4px;
+          }
+          .interest-row span:last-child {
+            text-align: left !important;
+          }
+          .pub-card {
+            padding: 28px 22px;
+          }
+          .pub-card > div {
+            flex-wrap: wrap;
+          }
+          .pub-card > div:first-child {
+            gap: 10px;
+          }
+          .pub-card:hover {
+            transform: none;
+          }
+          .metrics-grid {
+            grid-template-columns: 1fr !important;
+          }
           .project-row {
             grid-template-columns: 1fr;
             gap: 8px;
+          }
+          .project-row:hover {
+            padding-left: 0;
+          }
+          .site-footer {
+            align-items: flex-start !important;
+            flex-direction: column;
+            gap: 16px;
+            margin: 20px 16px 32px !important;
+            padding: 20px !important;
+          }
+          .site-footer > div {
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .nav-item {
+            font-size: 9px;
+          }
+          .hero-card, .section-content {
+            padding-inline: 18px !important;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            scroll-behavior: auto !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
           }
         }
       `}</style>
@@ -340,6 +479,7 @@ export default function DysonSite() {
 
       {/* Navigation — Cézanne painting strip (also shot by Dyson) */}
       <nav
+        className="site-nav"
         style={{
           position: "fixed",
           top: 0,
@@ -381,7 +521,7 @@ export default function DysonSite() {
         >
           HuoDx
         </span>
-        <div style={{ position: "relative", zIndex: 1, display: "flex", gap: 32 }}>
+        <div className="nav-links" style={{ position: "relative", zIndex: 1, display: "flex", gap: 32 }}>
           {SECTIONS.map((s) => (
             <button
               type="button"
@@ -397,6 +537,7 @@ export default function DysonSite() {
 
       {/* Hero */}
       <header
+        className="hero"
         style={{
           minHeight: "100vh",
           display: "flex",
@@ -423,7 +564,7 @@ export default function DysonSite() {
         />
 
         <div
-          className="island"
+          className="island hero-card"
           style={{
             padding: "48px 52px",
             width: "100%",
@@ -522,6 +663,7 @@ export default function DysonSite() {
           </div> */}
         </div>
         <div
+          className="stagger-6"
           style={{
             display: "flex",
             gap: 24,
@@ -529,7 +671,6 @@ export default function DysonSite() {
             opacity: loaded ? 1 : 0,
             animation: loaded ? "fadeUp 0.7s ease forwards" : "none",
           }}
-          className="stagger-6"
         >
           {[
             { label: "GitHub", icon: "↗" },
@@ -560,6 +701,7 @@ export default function DysonSite() {
 
         {/* Scroll indicator */}
         <div
+          className="scroll-indicator"
           style={{
             position: "absolute",
             bottom: 48,
@@ -602,7 +744,7 @@ export default function DysonSite() {
         label="01"
         title="About"
       >
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }}>
+        <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }}>
           <div>
             <p style={styles.bodyText}>
               Most of what I do starts a step before the work itself: figuring out
@@ -637,6 +779,7 @@ export default function DysonSite() {
             </h4>
             {CURRENT_INTERESTS.map(({ area, detail }) => (
               <div
+                className="interest-row"
                 key={area}
                 style={{
                   padding: "14px 0",
@@ -757,6 +900,7 @@ export default function DysonSite() {
 
         {/* Key metrics from the paper */}
         <div
+          className="metrics-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -1143,7 +1287,7 @@ export default function DysonSite() {
 
       {/* Footer */}
       <footer
-        className="island"
+        className="island site-footer"
         style={{
           padding: "16px 18px",
           margin: "40px auto 48px",

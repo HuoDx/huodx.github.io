@@ -18,6 +18,7 @@ export function Section({ children, id, label, sectionRefs, title }) {
 
   return (
     <section
+      className="portfolio-section"
       ref={(element) => {
         ref.current = element;
         sectionRefs.current[id] = element;
@@ -33,6 +34,7 @@ export function Section({ children, id, label, sectionRefs, title }) {
       }}
     >
       <div
+        className="section-heading"
         style={{
           display: "flex",
           alignItems: "baseline",
@@ -74,7 +76,7 @@ export function Section({ children, id, label, sectionRefs, title }) {
           }}
         />
       </div>
-      <div className="island" style={{ padding: "44px 48px" }}>
+      <div className="island section-content" style={{ padding: "44px 48px" }}>
         {children}
       </div>
     </section>
